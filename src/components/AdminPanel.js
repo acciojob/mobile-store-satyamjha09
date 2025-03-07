@@ -17,6 +17,7 @@ const AdminPanel = ({ products, setProducts }) => {
             <button className="delete-btn" onClick={() => deleteProduct(product.id)}>Delete</button>
         </div>
         ))}
+
     </div>
   );
 };
