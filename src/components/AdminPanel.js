@@ -10,12 +10,14 @@ const AdminPanel = ({ products, setProducts }) => {
     <div className="admin-panel">
       <h1>Admin Panel</h1>
       {products.map((product) => (
-        <div key={product.id} className="admin-product-item">
+        <div className="col-12" key={product.id}>
+        <div>
           <h2>{product.name}</h2>
           <p>{product.price}</p>
-          <Link to={`/admin/edit/${product.id}`} className="edit-btn">Edit</Link>
-          <button className="delete-btn" onClick={() => deleteProduct(product.id)}>Delete</button>
+          <Link to={`/admin/edit/${product.id}`}>Edit</Link>
+          <button onClick={() => deleteProduct(product.id)}>Delete</button>
         </div>
+      </div>
       ))}
     </div>
   );
