@@ -6,7 +6,7 @@ const ProductList = ({ products }) => {
     <div className="product-list">
       <h1>Product List</h1>
       {products.map((product) => (
-        <div key={product.id} className="product-item">
+        <div key={product.id} className="btn">
           <img src={product.image} alt={product.name} />
           <h2>{product.name}</h2>
           <p>{product.price}</p>
