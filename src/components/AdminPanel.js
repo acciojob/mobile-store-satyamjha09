@@ -13,8 +13,8 @@ const AdminPanel = ({ products, setProducts }) => {
         <div key={product.id} className="product-row">
             <h2>{product.name}</h2>
             <p>{product.price}</p>
-            <Link to={`/admin/edit/${product.id}`} className="edit-btn">Edit</Link>
-            <button className="delete-btn" onClick={() => deleteProduct(product.id)}>Delete</button>
+            <Link to={`/admin/edit/${product.id}`} className="edit-product-link">Edit</Link>
+            <button className="delete-product-btn" onClick={() => deleteProduct(product.id)}>Delete</button>
         </div>
         ))}
 
