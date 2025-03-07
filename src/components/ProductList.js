@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ProductList = ({ products }) => {
+
   return (
     <div className="product-list">
       <h1>Product List</h1>
@@ -10,7 +11,7 @@ const ProductList = ({ products }) => {
           <img src={product.image} alt={product.name} />
           <h2>{product.name}</h2>
           <p>{product.price}</p>
-          <Link to={`/products/${product.id}`} className="product-link">View Details</Link>
+         <Link to={`/products/${product.id}`} className="btn product-link">View Details</Link>
         </div>
       ))}
     </div>
