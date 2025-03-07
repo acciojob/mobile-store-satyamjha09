@@ -13,26 +13,22 @@ const initialProducts = [
   { id: 3, name: "OnePlus 10 Pro", price: "$799", description: "Powerful and fast.", image: "https://via.placeholder.com/150" }
 ];
 
-
 const App = () => {
-
-  const [products, setProducts] = useState(initialProducts)
+  const [products, setProducts] = useState(initialProducts);
 
   return (
-    <div>
-      <Router>
-        <nav>
-          <Link to="/">Home</Link> | <Link to="/admin">Admin Panel</Link>
-        </nav>
-        <Routes>
-          <Route path="/" element={<ProductList products={products} />}  />
-          <Route path="/products/:id" element={<ProductDetails products={products}   />}  />
-          <Route path="/admin" element={<AdminPanel products={products} setProducts={setProducts} />}   />
-          <Route path="/admin/edit/:id" element={<EditProduct products={products} setProducts={setProducts}  />}  />
-        </Routes>
-      </Router>
-    </div>
-  )
-}
+    <Router>
+      <nav>
+        <Link to="/">Home</Link> | <Link to="/admin">Admin Panel</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<ProductList products={products} />} />
+        <Route path="/products/:id" element={<ProductDetails products={products} />} />
+        <Route path="/admin" element={<AdminPanel products={products} setProducts={setProducts} />} />
+        <Route path="/admin/edit/:id" element={<EditProduct products={products} setProducts={setProducts} />} />
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
