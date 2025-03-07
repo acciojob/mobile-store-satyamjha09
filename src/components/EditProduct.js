@@ -19,13 +19,13 @@ const EditProduct = ({ products, setProducts }) => {
   };
 
   return (
-    <div>
+    <div className="edit-product">
       <h1>Edit Product</h1>
       <form onSubmit={handleSubmit}>
         <input name="name" value={formData.name} onChange={handleChange} />
         <input name="price" value={formData.price} onChange={handleChange} />
         <input name="description" value={formData.description} onChange={handleChange} />
-        <button type="submit">Save</button>
+        <button type="submit" className="save-btn">Save</button>
       </form>
     </div>
   );

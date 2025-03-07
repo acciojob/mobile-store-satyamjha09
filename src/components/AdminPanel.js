@@ -7,17 +7,16 @@ const AdminPanel = ({ products, setProducts }) => {
   };
 
   return (
-    <div>
+    <div className="admin-panel">
       <h1>Admin Panel</h1>
-      {products.map((product, index) => (
-        <div key={product.id} className="product-row">
-            <h2>{product.name}</h2>
-            <p>{product.price}</p>
-            <Link to={`/admin/edit/${product.id}`} className="edit-product-link">Edit</Link>
-            <button className="delete-product-btn" onClick={() => deleteProduct(product.id)}>Delete</button>
+      {products.map((product) => (
+        <div key={product.id} className="admin-product-item">
+          <h2>{product.name}</h2>
+          <p>{product.price}</p>
+          <Link to={`/admin/edit/${product.id}`} className="edit-link">Edit</Link>
+          <button className="delete-btn" onClick={() => deleteProduct(product.id)}>Delete</button>
         </div>
-        ))}
-
+      ))}
     </div>
   );
 };
