@@ -1,21 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ProductList = ({ products }) => {
-
   return (
-    <div className="product-list">
-      <h1>Product List</h1>
-      {products.map((product) => (
-        <div key={product.id} className="btn">
-          <img src={product.image} alt={product.name} />
-          <h2>{product.name}</h2>
-          <p>{product.price}</p>
-         <Link to={`/products/${product.id}`} className="btn product-link">View Details</Link>
-        </div>
+    <div>
+        <h2> Mobile Store </h2>
+        {products.map(product => (
+            <div key={product.id}>
+            <img src={product.image} alt={product.name} width="100" />
+            <Link to={`/products/${product.id}`}>{product.name}</Link>
+            <p>Price: {product.price}</p>
+            </div>
       ))}
     </div>
-  );
-};
+  )
+}
 
-export default ProductList;
+export default ProductList
